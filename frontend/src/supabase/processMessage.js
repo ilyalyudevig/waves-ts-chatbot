@@ -67,8 +67,6 @@ async function processMessage(question, convHistory) {
   convHistory.push(question);
   convHistory.push(response);
 
-  console.log(formatConvHistory(convHistory));
-
   return response;
 }
 
