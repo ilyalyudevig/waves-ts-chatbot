@@ -10,6 +10,8 @@ import {
 } from '@chatscope/chat-ui-kit-react';
 import './App.css';
 
+import { processMessage } from './supabase/processMessage.js';
+
 function App() {
   const [messages, setMessages] = useState([
     {
@@ -36,7 +38,14 @@ function App() {
     setIsTyping(true);
 
     // process message to chatGPT (send it over and see the response)
-    async function processMessageToChatGPT(chatMessages) {}
+    setMessages([
+      ...newMessages,
+      {
+        message: await processMessage(message, newMessages),
+        sender: 'WavesAI',
+      },
+    ]);
+    setIsTyping(false);
   };
 
   return (
@@ -53,7 +62,6 @@ function App() {
               }
             >
               {messages.map((message, i) => {
-                console.log(message);
                 return <Message key={i} model={message} />;
               })}
             </MessageList>
