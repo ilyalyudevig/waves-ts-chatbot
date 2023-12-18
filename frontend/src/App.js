@@ -57,7 +57,7 @@ function App() {
               scrollBehavior="smooth"
               typingIndicator={
                 isTyping ? (
-                  <TypingIndicator content="ChatGPT is typing" />
+                  <TypingIndicator content="WavesAI TS agent is typing" />
                 ) : null
               }
             >
