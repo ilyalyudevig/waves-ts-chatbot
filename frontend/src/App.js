@@ -50,11 +50,10 @@ function App() {
 
   return (
     <div className="App">
-      <div style={{}}>
-        <MainContainer className="main-container">
+      <div style={{ position: 'relative' }}>
+        <MainContainer>
           <ChatContainer>
             <MessageList
-              className="message-list"
               scrollBehavior="smooth"
               typingIndicator={
                 isTyping ? (
@@ -63,16 +62,10 @@ function App() {
               }
             >
               {messages.map((message, i) => {
-                return (
-                  <Message key={i} model={message} className="chat-message" />
-                );
+                return <Message key={i} model={message} />;
               })}
             </MessageList>
-            <MessageInput
-              className="message-input"
-              placeholder="Type message here"
-              onSend={handleSend}
-            />
+            <MessageInput placeholder="Type message here" onSend={handleSend} />
           </ChatContainer>
         </MainContainer>
       </div>

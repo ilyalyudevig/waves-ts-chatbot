@@ -11,8 +11,8 @@ body {
     font-size: 14px;
   }
 
-  .main-container {
-    height: 667px;
+  .cs-main-container {
+    height: 500px;
   }
 
   /* Additional styles for Mobile devices */
@@ -24,7 +24,7 @@ body {
     font-size: 16px;
   }
 
-  .main-container {
+  .cs-main-container {
     height: 540px;
   }
 
@@ -37,7 +37,7 @@ body {
     font-size: 18px;
   }
 
-  .main-container {
+  .cs-main-container {
     height: auto;
   }
 
@@ -50,7 +50,7 @@ body {
     font-size: 20px;
   }
 
-  .main-container {
+  .cs-main-container {
     height: auto;
   }
 
@@ -63,7 +63,7 @@ body {
     font-size: 22px;
   }
 
-  .main-container {
+  .cs-main-container {
     height: auto;
   }
 
@@ -74,7 +74,7 @@ body {
     font-size: 22px;
   }
 
-  .main-container {
-    height: 653px;
+  .cs-main-container {
+    height: 600px;
   }
 }
