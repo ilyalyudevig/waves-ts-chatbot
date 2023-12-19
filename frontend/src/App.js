@@ -15,7 +15,7 @@ import { processMessage } from './supabase/processMessage.js';
 function App() {
   const [messages, setMessages] = useState([
     {
-      message: 'Hello, I am Waves AI TS agent!',
+      message: 'Hello, I am WavesAI TS agent!',
       sender: 'WavesAI',
     },
   ]);
@@ -50,10 +50,11 @@ function App() {
 
   return (
     <div className="App">
-      <div style={{ position: 'relative', height: '100%', width: '100%' }}>
-        <MainContainer>
+      <div style={{}}>
+        <MainContainer className="main-container">
           <ChatContainer>
             <MessageList
+              className="message-list"
               scrollBehavior="smooth"
               typingIndicator={
                 isTyping ? (
@@ -62,10 +63,16 @@ function App() {
               }
             >
               {messages.map((message, i) => {
-                return <Message key={i} model={message} />;
+                return (
+                  <Message key={i} model={message} className="chat-message" />
+                );
               })}
             </MessageList>
-            <MessageInput placeholder="Type message here" onSend={handleSend} />
+            <MessageInput
+              className="message-input"
+              placeholder="Type message here"
+              onSend={handleSend}
+            />
           </ChatContainer>
         </MainContainer>
       </div>
