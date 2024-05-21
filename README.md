@@ -1,1 +1,1 @@
-AI chatbot for a TS agent
+OpenAI-based RAG chatbot for a Waves TS agent
